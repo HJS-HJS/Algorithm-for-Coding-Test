@@ -20,11 +20,32 @@ int main(){
         v.push_back(a[i]);
     }
 
+    // Use array
+    // Array and size
+    cout << "\n";
+    do{
+        printV(v);
+    }while(next_permutation(a, a + 3));
+
+    // Start and end adress
+    cout << "\n";
+    do{
+        printV(v);
+    }while(next_permutation(&a[0], &a[3]));
+
+    // Use vector
+    // Start and end iterator
     cout << "\n";
     do{
         printV(v);
     }while(next_permutation(v.begin(), v.end()));
 
+    cout << "\n";
+    do{
+        printV(v);
+    }while(next_permutation(v.begin(), v.begin() + 3));
+
+    // Start and end adress
     cout << "\n";
     do{
         printV(v);
@@ -35,8 +56,4 @@ int main(){
         printV(v);
     }while(next_permutation(&v[0], &v[0] + 3));
 
-    cout << "\n";
-    do{
-        printV(v);
-    }while(next_permutation(v.begin(), v.begin() + 3));
 }
